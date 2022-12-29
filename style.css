@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  text-align: center;
+  background: url(https://pyxis.nymag.com/v1/imgs/9cb/fc7/462629c8257e760ef715e340760354ea18-Devin-Yalkin-Piano.2x.rsocial.w600.jpg);
+}
+
+.main h1 {
+  font-size: 60px;
+  color: transparent;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #403B4A;
+  color: -webkit-linear-gradient(to right, #E7E9BB, #403B4A);
+  color: linear-gradient(to right, #E7E9BB, #403B4A);
+}
+
+.keys {
+  display: block;
+  width: 100%;
+  height: 396px;
+  max-width: 1150px;
+  position: relative;
+  margin: 100px auto 0;
+  cursor: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 5px;
+}
+.keys .key {
+  position: relative;
+  border: 2px solid black;
+  border-radius: 0;
+  transition: all 0.07s ease;
+  display: block;
+  z-index: 2;
+  box-sizing: border-box;
+}
+.keys .key:not(.sharp) {
+  float: left;
+  width: 10%;
+  height: 85%;
+  font-size: 18px;
+  background: aliceblue;
+  border-radius: 4%;
+}
+.keys .key.sharp {
+  position: absolute;
+  width: 6%;
+  height: 50%;
+  top: 0;
+  font-size: 20px;
+  padding-top: 20px;
+  background: #000000;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px #eee;
+  z-index: 3;
+  border-radius: 4%;
+}
+.keys .key[data-key="87"] {
+  left: 7%;
+}
+.keys .key[data-key="69"] {
+  left: 17%;
+}
+.keys .key[data-key="84"] {
+  left: 37%;
+}
+.keys .key[data-key="89"] {
+  left: 47%;
+}
+.keys .key[data-key="85"] {
+  left: 57%;
+}
+.keys .key[data-key="79"] {
+  left: 77%;
+}
+.keys .key[data-key="80"] {
+  left: 87%;
+}
+.keys .playing {
+  transform: scale(0.95);
+  border-color: #1f98ee;
+  box-shadow: 0 0 10px #1f98ee;
+}
+
+.audio-spectrum {
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+}
+.audio-spectrum div {
+  width: 50px;
+  height: 250px;
+  margin-right: 10px;
+  border-radius: 5px;
+  background: #eee;
+  -webkit-animation: infinite linear 1s equalizer;
+          animation: infinite linear 1s equalizer;
+}
+@-webkit-keyframes equalizer {
+  0% {
+    height: 15px;
+  }
+  10% {
+    height: 30px;
+  }
+  20% {
+    height: 15px;
+  }
+  30% {
+    height: 220px;
+  }
+  40% {
+    height: 100px;
+  }
+  50% {
+    height: 250px;
+  }
+  60% {
+    height: 60px;
+  }
+  70% {
+    height: 80px;
+  }
+  80% {
+    height: 15px;
+  }
+  90% {
+    height: 100px;
+  }
+  100% {
+    height: 50px;
+  }
+}
+@keyframes equalizer {
+  0% {
+    height: 15px;
+  }
+  10% {
+    height: 30px;
+  }
+  20% {
+    height: 15px;
+  }
+  30% {
+    height: 220px;
+  }
+  40% {
+    height: 100px;
+  }
+  50% {
+    height: 250px;
+  }
+  60% {
+    height: 60px;
+  }
+  70% {
+    height: 80px;
+  }
+  80% {
+    height: 15px;
+  }
+  90% {
+    height: 100px;
+  }
+  100% {
+    height: 50px;
+  }
+}
+
+.audio-spectrum div:nth-child(1) {
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+}
+
+.audio-spectrum div:nth-child(2) {
+  -webkit-animation-duration: 1.7s;
+          animation-duration: 1.7s;
+}
+
+.audio-spectrum div:nth-child(3) {
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+}
+
+.audio-spectrum div:nth-child(4) {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.audio-spectrum div:nth-child(5) {
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+}
+
+.audio-spectrum div:nth-child(6) {
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+}
+
+.audio-spectrum div:nth-child(7) {
+  -webkit-animation-duration: 1.9s;
+          animation-duration: 1.9s;
+}
+
+.audio-spectrum div:nth-child(8) {
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+}
+
+.audio-spectrum div:nth-child(9) {
+  -webkit-animation-duration: 1.7s;
+          animation-duration: 1.7s;
+}
+
+.audio-spectrum div:nth-child(10) {
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+}
+
+.audio-spectrum div:nth-child(11) {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.audio-spectrum div:nth-child(12) {
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+}
+
+.audio-spectrum div:nth-child(13) {
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+}
+
+.audio-spectrum div:nth-child(14) {
+  -webkit-animation-duration: 1.9s;
+          animation-duration: 1.9s;
+}
+
+.audio-spectrum div:nth-child(15) {
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+}
+
+.audio-spectrum div:nth-child(16) {
+  -webkit-animation-duration: 1.7s;
+          animation-duration: 1.7s;
+}
+
+.audio-spectrum div:nth-child(17) {
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+}
+
+.audio-spectrum div:nth-child(17) {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.audio-spectrum div:nth-child(19) {
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+}
+
+.audio-spectrum div:nth-child(20) {
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+}
+
+.audio-spectrum div:nth-child(21) {
+  -webkit-animation-duration: 1.9s;
+          animation-duration: 1.9s;
+}
+
+.audio-spectrum div:nth-child(22) {
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+}
+
+.audio-spectrum div:nth-child(23) {
+  -webkit-animation-duration: 1.7s;
+          animation-duration: 1.7s;
+}
+
+.audio-spectrum div:nth-child(34) {
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+}
+
+.audio-spectrum div:nth-child(24) {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.audio-spectrum div:nth-child(26) {
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+}
+
+.audio-spectrum div:nth-child(25) {
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+}
+
+.audio-spectrum div:nth-child(28) {
+  -webkit-animation-duration: 1.9s;
+          animation-duration: 1.9s;
+}
+
+.audio-spectrum div:nth-child(30) {
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+}
+
+.audio-spectrum div:nth-child(31) {
+  -webkit-animation-duration: 1.7s;
+          animation-duration: 1.7s;
+}
+
+.audio-spectrum div:nth-child(32) {
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+}
+
+.audio-spectrum div:nth-child(33) {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.audio-spectrum div:nth-child(38) {
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+}
+
+.audio-spectrum div:nth-child(40) {
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+}
+
+.audio-spectrum div:nth-child(41) {
+  -webkit-animation-duration: 1.9s;
+          animation-duration: 1.9s;
+}/*# sourceMappingURL=style.css.map */
